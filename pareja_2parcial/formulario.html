@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="stylesheet" href="estile.css">
+    <center>
+        <div class="navbar">
+            <ul>
+                <li><a href="index.html">STAR GIRLS</a><li></li>
+                <li><a href="catalogo.html">CATALAGO</a><li></li>
+                <li><a href="reseñas.html">RESEÑAS</a><li></li>
+                <li><a href="contacto.html">CONTACTO</a><li></li>
+                <li><a href="formulario.html">FORMULARIO</a><li></li>  
+            </ul>
+        </div><br>
+    </center>
+</head>
+<body>
+    <center>
+    <div class="contenedor">
+        <header class="cabecera">
+            <h1>✨ STAR GIRLS</h1>
+            <p>Nos interesa mucho conocer tu opinión y tus gustos</p>
+        </header>
+
+        <form method="POST" action="#">
+            <h2>Conoce más de ti 💖</h2>
+            <label for="nombre">Tu nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="¿Cómo te llamas?" required>
+            <label>¿Qué estilo de ropa prefieres?</label>
+            <select id="estilo" name="estilo">
+                <option value="">-- Elige tu estilo --</option>
+                <option value="clasico">Clásico y elegante</option>
+                <option value="casual">Casual y cómodo</option>
+                <option value="moderno">Moderno y tendencia</option>
+                <option value="romantico">Romántico y femenino</option>
+                <option value="deportivo">Deportivo</option>
+            </select>
+            <label>¿Qué te gusta más de nuestra tienda? (puedes elegir varias)</label>
+            <div class="opcion">
+                <input type="checkbox" id="vestidos" name="gustos" value="vestidos">
+                <label for="vestidos">Vestidos</label>
+            </div>
+            <div class="opcion">
+                <input type="checkbox" id="blusas" name="gustos" value="blusas">
+                <label for="blusas">Blusas y Camisas</label>
+            </div>
+            <div class="opcion">
+                <input type="checkbox" id="pantalones" name="gustos" value="pantalones">
+                <label for="pantalones">Pantalones y Faldas</label>
+            </div>
+            <div class="opcion">
+                <input type="checkbox" id="nada" name="gustos" value="aun_no_se">
+                <label for="nada">Aún no he decidido</label>
+            </div>
+            <label>¿Qué te parece nuestra página?</label>
+            <div class="estrellas">
+                <input type="radio" id="estrella1" name="calificacion" value="1">
+                <label for="estrella1">⭐</label>
+                <input type="radio" id="estrella2" name="calificacion" value="2">
+                <label for="estrella2">⭐</label>
+                <input type="radio" id="estrella3" name="calificacion" value="3">
+                <label for="estrella3">⭐</label>
+                <input type="radio" id="estrella4" name="calificacion" value="4">
+                <label for="estrella4">⭐</label>
+                <input type="radio" id="estrella5" name="calificacion" value="5">
+                <label for="estrella5">⭐</label>
+            </div>
+            <label>¿Qué es lo que más te ha gustado?</label>
+            <div class="opcion">
+                <input type="radio" id="diseno" name="gusta" value="diseno">
+                <label for="diseno">El diseño y los colores</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="productos" name="gusta" value="productos">
+                <label for="productos">La variedad de productos</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="facilidad" name="gusta" value="facilidad">
+                <label for="facilidad">Lo fácil de usar</label>
+            </div>
+            <div class="opcion">
+                <input type="radio" id="otro" name="gusta" value="otro">
+                <label for="otro">Otra cosa</label>
+            </div>
+            <label>¿Qué nos gustaría mejorar?</label>
+            <textarea id="mejoras" name="mejoras" placeholder="Escribe aquí tus sugerencias, ideas o lo que te gustaría ver..."></textarea>
+            <label>¿Con qué frecuencia nos visitarías?</label>
+            <select id="frecuencia" name="frecuencia">
+                <option value="">-- Selecciona --</option>
+                <option value="semanal">Cada semana</option>
+                <option value="quincenal">Cada quince días</option>
+                <option value="mensual">Una vez al mes</option>
+                <option value="ocasional">Solo cuando busco algo específico</option>
+            </select>
+
+            <button type="submit" class="boton-enviar">Enviar mi opinión 💌</button>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const nombre = document.getElementById('nombre').value;
+            alert(`¡Gracias por participar, ${nombre}! 💖\nTus gustos y opinión nos ayudarán a mejorar mucho.`);
+            form.reset();
+        });
+    </script>
+</center>
+</body>
+</html>
